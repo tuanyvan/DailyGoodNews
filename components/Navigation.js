@@ -9,38 +9,38 @@ class Navigation extends Component {
     super(props);
 
     if (this.props.withNavBrand) {
-      this.navBrand = (
-        <Navbar.Brand href="#home">
-          <div className="d-flex flex-row align-items-center">
-            <img
-              className="img-fluid logo"
-              src={logo.src}
-              alt="Good News, Everyone logo"
-            />
-            <h1 className="mb-2 ms-3 fs-2">Good News, Everyone</h1>
-          </div>
-        </Navbar.Brand>
-      );
-      this.navToggle = <Navbar.Toggle aria-controls="responsive-navbar-nav" />;
       this.navBar = (
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav>
-            <Nav.Link className="p-0 mx-3" href="#home">
-              Home
-            </Nav.Link>
-            <Nav.Link className="p-0 mx-3" href="#about">
-              About
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        <div className="d-flex flex-row align-items-center">
+          <Navbar.Brand href="/">
+            <div className="d-flex flex-row align-items-center">
+              <img
+                className="img-fluid logo"
+                src={logo.src}
+                alt="Good News, Everyone logo"
+              />
+              <h1 className="mb-2 ms-3 fs-2">Good News, Everyone</h1>
+            </div>
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav>
+              <Nav.Link className="p-0 mx-3" href="/">
+                Home
+              </Nav.Link>
+              <Nav.Link className="p-0 mx-3" href="/about">
+                About
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </div>
       );
     } else {
       this.navBar = (
         <Nav>
-          <Nav.Link className="p-0 mx-3" href="#home">
+          <Nav.Link className="p-0 mx-3" href="/">
             Home
           </Nav.Link>
-          <Nav.Link className="p-0 mx-3" href="#about">
+          <Nav.Link className="p-0 mx-3" href="/about">
             About
           </Nav.Link>
         </Nav>
@@ -55,8 +55,6 @@ class Navigation extends Component {
         collapseOnSelect
         expand="lg"
       >
-        {this.navBrand}
-        {this.navToggle}
         {this.navBar}
       </Navbar>
     );

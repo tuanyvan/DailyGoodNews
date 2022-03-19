@@ -1,10 +1,10 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 
-import Navigation from "../components/Navigation";
 import Header from "../components/Header";
 import NewsForm from "../components/NewsForm";
+import Footer from "../components/Footer";
 
+import styles from "../styles/Home.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Home() {
@@ -31,9 +31,8 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <Navigation />
-      </footer>
+      <Footer />
+      
     </div>
   );
 }
