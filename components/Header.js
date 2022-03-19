@@ -2,6 +2,8 @@ import Navigation from "./Navigation"
 
 export default function Header() {
     return (
-        <Navigation withNavBrand />
+        <header>
+            <Navigation withNavBrand />
+        </header>
     )
 }
