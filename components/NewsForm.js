@@ -24,9 +24,10 @@ export default function NewsForm() {
 
         const requestArticle = await fetch(serverEndpoint, parameters)
 
-        const article = await requestArticle.json();
+        const articles = await requestArticle.json();
 
-        setForm(article.data)
+        // For now, just return the first article.
+        setForm(<p>{articles.data[0].title}</p>)
 
     }
 
@@ -36,9 +37,10 @@ export default function NewsForm() {
             // action="/api/submit-topic.js" 
             // method="post" 
             className="d-flex flex-column align-items-center justify-content-around">
-            <label className="mb-2" htmlFor="topic">Search for a news topic:</label>
-            <input className="mb-2" type="text" id="topic" name="topic" required />
-            <button className="btn btn-primary" type="submit">Submit</button>
+            <h2 className="mb-3">Search for a news topic:</h2>
+            <label className="d-none" htmlFor="topic">Search for a news topic:</label>
+            <input className="mb-2 col-10" type="text" id="topic" name="topic" required />
+            <button className="btn btn-primary col-10 fs-5" type="submit">Submit</button>
         </form>
     );
 
