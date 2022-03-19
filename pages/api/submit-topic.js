@@ -12,6 +12,7 @@ export default function handler(req, res) {
     axios.get(`https://newsapi.org/v2/everything?q=${body.topic}&apiKey=${NEWS_API_KEY}`)
     .then(result => {
         res.status(200).json({ data: result.data.articles })
+        res.end()
       }
     )
     .catch(err => console.log(err))
