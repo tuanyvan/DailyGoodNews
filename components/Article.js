@@ -11,7 +11,6 @@ class Article extends Component {
     this.author = this.props.article.author
     this.url = this.props.article.url
     this.content = this.props.article.content
-    // this.publishedAt = this.props.article.publishedAt
     this.publishedAt = moment(new Date(this.props.article.publishedAt)).format('MMMM Do YYYY')
   }
 
