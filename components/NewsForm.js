@@ -48,7 +48,7 @@ class NewsForm extends Component {
         
         this.setState((state) => {
             return {
-                catalog: articles,
+                catalog: articles.data,
                 articleNumber: state.articleNumber + 1,
                 form: 
                 <div>
@@ -64,20 +64,45 @@ class NewsForm extends Component {
     }
 
     async nextArticle() {
-        this.setState((state) => {
-            return {
-                articleNumber: state.articleNumber + 1,
-                form: 
-                    <div key={state.articleNumber}>
-                        <Article article={state.catalog.data[state.articleNumber]} />
-                        <button
-                        className="btn btn-primary"
-                        onClick={this.nextArticle.bind(this)}>
-                            Next Article    
-                        </button>
-                    </div>
-            }
-        })
+        if (this.state.articleNumber < this.state.catalog.length) {
+            this.setState((state) => {
+                return {
+                    articleNumber: state.articleNumber + 1,
+                    form: 
+                        <div key={state.articleNumber}>
+                            <Article article={state.catalog[state.articleNumber]} />
+                            <button
+                            className="btn btn-primary"
+                            onClick={this.nextArticle.bind(this)}>
+                                Next Article    
+                            </button>
+                        </div>
+                }
+            })
+        }
+        else {
+            this.setState((state) => {
+                return {
+                    form: 
+                        <div key={state.articleNumber}>
+                            <p>That's all the articles for today.</p>
+                            <p>Would you like to search another topic?</p>
+                            <div>
+                                <button
+                                className="btn btn-success"
+                                onClick={() => window.location.reload(false)}>
+                                    Yes
+                                </button>
+                                <button
+                                className="btn btn-danger"
+                                onClick={() => history.go(-1)}>
+                                    No, that's all for today.
+                                </button>
+                            </div>
+                        </div>
+                }
+            })
+        }
     }
 
     render() {

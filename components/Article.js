@@ -17,11 +17,10 @@ class Article extends Component {
   render() {
     return (
         <article>
-            <img className="img-fluid" src={this.image} alt={this.title} />
-            <a href={this.url}><h2>{this.title}</h2></a>
+            <img className="img-fluid min-h-100" src={this.image} alt={this.title} />
+            <a href={this.url} target="_blank"><h2>{this.title}</h2></a>
             <h3>{this.author} | {this.source}</h3>
             <h4>{this.publishedAt}</h4>
-            <p>An interesting sneak peek of the article:</p>
             <p>{this.content}</p>
         </article>
     );
