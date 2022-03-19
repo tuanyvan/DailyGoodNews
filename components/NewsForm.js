@@ -11,8 +11,6 @@ class NewsForm extends Component {
             form:
                 <form 
                 onSubmit={this.handleSubmission.bind(this)}
-                // action="/api/submit-topic.js" 
-                // method="post" 
                 className="d-flex flex-column align-items-center justify-content-around">
                     <label className="mb-3 fs-2" htmlFor="topic">Search for a news topic:</label>
                     <input className="mb-2 col-10 text-center fs-4" type="text" id="topic" name="topic" required />
@@ -94,8 +92,8 @@ class NewsForm extends Component {
                                     Yes
                                 </button>
                                 <button
-                                className="btn btn-danger"
-                                onClick={() => history.go(-1)}>
+                                className="ms-2 btn btn-danger"
+                                onClick={() => window.location.href='http://www.google.com'}>
                                     No, that's all for today.
                                 </button>
                             </div>
