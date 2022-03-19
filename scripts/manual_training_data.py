@@ -32,7 +32,8 @@ for headline in headlines:
         sentiment = 'neutral'
     
 ## Append results to .csv
-    with open(CSV, 'a', newline='') as td_file:
-        td_writer = csv.writer(td_file)
-        td_writer.writerow([headline, sentiment])
-        td_file.close()
+    if user_input != 'q':
+        with open(CSV, 'a', newline='') as td_file:
+            td_writer = csv.writer(td_file)
+            td_writer.writerow([headline, sentiment])
+            td_file.close()
