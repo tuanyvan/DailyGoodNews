@@ -1,9 +1,9 @@
-import Navigation from "./Navigation"
+import Navigation from "./Navigation";
 
 export default function Header() {
-    return (
-        <header>
-            <Navigation withNavBrand />
-        </header>
-    )
+  return (
+    <header>
+      <Navigation withNavBrand />
+    </header>
+  );
 }
