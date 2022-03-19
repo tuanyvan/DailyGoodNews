@@ -10,10 +10,10 @@ class Navigation extends Component {
 
     if (this.props.withNavBrand) {
       this.navBrand = 
-        <Navbar.Brand>
+        <Navbar.Brand href="#home">
           <div className="d-flex flex-row align-items-center">
             <img className="img-fluid logo" src={logo.src} alt="Good News, Everyone logo" />
-            <h1 className="mb-0 ms-3 fs-2">Good News, Everyone</h1>
+            <h1 className="mb-2 ms-3 fs-2">Good News, Everyone</h1>
           </div>
         </Navbar.Brand>;
       this.navToggle = <Navbar.Toggle aria-controls="responsive-navbar-nav" />
