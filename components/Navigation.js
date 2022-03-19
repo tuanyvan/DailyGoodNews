@@ -9,6 +9,21 @@ class Navigation extends Component {
 
     if (this.props.withNavBrand) {
       this.navBrand = <Navbar.Brand>Good News, Everyone</Navbar.Brand>;
+      this.navToggle = <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      this.navBar =
+        <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav>
+                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="#about">About</Nav.Link>
+            </Nav>
+        </Navbar.Collapse>
+    }
+    else {
+        this.navBar =
+            <Nav>
+                <Nav.Link href="#home">Home</Nav.Link>
+                <Nav.Link href="#about">About</Nav.Link>
+            </Nav>
     }
   }
 
@@ -16,30 +31,11 @@ class Navigation extends Component {
     return (
       <Navbar className="px-4 py-3" collapseOnSelect expand="lg">
         {this.navBrand}
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav>
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#about">About</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        {this.navToggle}
+        {this.navBar}
       </Navbar>
     );
   }
 }
 
 export default Navigation;
-
-// export default function Navigation() {
-//     return (
-//         <Navbar className="px-4 py-3" collapseOnSelect expand="lg">
-//             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-//             <Navbar.Collapse id="responsive-navbar-nav">
-//                 <Nav>
-//                     <Nav.Link href="#home">Home</Nav.Link>
-//                     <Nav.Link>About</Nav.Link>
-//                 </Nav>
-//             </Navbar.Collapse>
-//         </Navbar>
-//     )
-// }

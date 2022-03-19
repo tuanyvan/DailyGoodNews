@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 
 import Navigation from '../components/Navigation'
 import Header from '../components/Header'
+import NewsForm from '../components/NewsForm'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
@@ -19,7 +20,9 @@ export default function Home() {
       <Header />
 
       <main className={styles.main}>
-        
+        <div className="card p-5 w-50 min-h-50">
+          <NewsForm />
+        </div>
       </main>
 
       <footer className={styles.footer}>
