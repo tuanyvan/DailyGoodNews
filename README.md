@@ -1,3 +1,6 @@
+## Live Deployment
+The live deployment for this website will be up on [http://goodnewseveryone.tech/](http://goodnewseveryone.tech/).
+
 ## Inspiration
 Power Up Hacks' Google Cloud Platform theme made me very interested in participating. I have used its Google Productivity tools APIs before to create a deadline-keeping Discord bot with my university peers. However, I never played around with its ML training tools and took it as an opportunity to try something new.
 
