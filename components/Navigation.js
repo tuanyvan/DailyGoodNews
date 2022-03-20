@@ -12,7 +12,7 @@ class Navigation extends Component {
     if (this.props.withNavBrand) {
       this.navBar = (
         <Navbar expand="lg">
-          <Container className="container-fluid">
+          <div className="container-fluid">
             <Navbar.Brand
               className="d-flex flex-row align-items-center"
               href="/"
@@ -35,7 +35,7 @@ class Navigation extends Component {
                 </Nav.Link>
               </Nav>
             </Navbar.Collapse>
-          </Container>
+          </div>
         </Navbar>
       );
     } else {
