@@ -7,7 +7,7 @@ class Paragraph extends Component {
 
   render() {
     return (
-      <section class="paragraph">
+      <section className="paragraph">
         <h2>{this.props.title}</h2>
         {this.props.children}
       </section>

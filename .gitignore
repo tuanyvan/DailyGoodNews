@@ -34,5 +34,6 @@ yarn-error.log*
 # vercel
 .vercel
 
-# python secrets
+# secrets
+secret.json
 .env
