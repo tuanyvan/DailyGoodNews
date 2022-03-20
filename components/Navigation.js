@@ -22,7 +22,7 @@ class Navigation extends Component {
                 src={logo.src}
                 alt="Good News, Everyone logo"
               />
-              <h1 className="mb-2 ms-3 fs-2">Good News, Everyone</h1>
+              <h1 className="mb-0 ms-3 fs-2">Good News, Everyone</h1>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
