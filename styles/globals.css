@@ -6,7 +6,8 @@ body {
 }
 
 header,
-main {
+main,
+footer {
   font-family: "Merriweather", serif !important;
 }
 
@@ -22,6 +23,10 @@ a {
 .logo {
   width: 6rem;
   height: auto;
+}
+
+.paragraph {
+  margin: 1rem 0rem;
 }
 
 * {
