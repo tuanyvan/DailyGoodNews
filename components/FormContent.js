@@ -16,13 +16,13 @@ class FormContent extends Component {
           Search for a news topic:
         </label>
         <input
-          className="mb-2 col-10 text-center fs-4"
+          className="mb-2 col-12 col-md-10 text-center fs-4"
           type="text"
           id="topic"
           name="topic"
           required
         />
-        <button className="btn btn-primary col-10 fs-5" type="submit">
+        <button className="btn btn-primary col-12 col-md-10 fs-5" type="submit">
           Submit
         </button>
         {this.props.children}
